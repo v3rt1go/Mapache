@@ -1,0 +1,94 @@
+a {
+    color: #c00 ;
+    text-decoration: none;
+}
+
+.menu {
+  padding-bottom: 30px;
+}
+
+.menu-open {
+  width: auto;
+  padding: 5px 10px;
+  border-radius: 10%;
+  line-height: 38px;
+}
+.icon-menu-text {
+  font-size: 14px;
+  vertical-align: top;
+}
+
+@media only screen and (max-width:1024px){
+  .show-on-large-screen{display:none;}
+}
+
+.header-secondary-menu a {
+  color: white;
+  font-size: 13px;
+  border-radius: 10%;
+  padding: 5px 10px;
+  transition: background .3s;
+}
+.header-secondary-menu a:hover, .menu-open:hover {background-color:rgba(0,0,0,.30)}
+
+.sidebar-img {
+  max-width: 300px;
+  clear: both;
+}
+
+.share { text-align: right; }
+.share a {
+  font-size: 15px;
+  vertical-align: middle;
+  color:  #253238;
+  transition: color .6s;
+}
+.share a:hover { color: #c00; }
+
+.post-author {
+  background: rgba(176,190,197,.16) url('../img/bg-author.png') top left repeat-x;
+}
+
+.post-excerpt {
+  font-size: 13px;
+  color: white;
+  display: block;
+  padding: 5px 20px;
+}
+
+.post-img {
+  max-width: 836px;
+}
+
+.small-card {
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+
+.featured-card {
+  padding-bottom: 0;
+}
+.featured-item {
+  margin: 0 -16px 0 -16px;
+  padding: 0;
+}
+.featured-link {
+  padding-top: 1em;
+  max-height: 100px;
+}
+.featured-link h2 {
+  font-size: 17px;
+  color: #d3d3d3;
+}
+
+.sidebar dt {
+  font-weight: bold;
+  color: #253238;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+.sidebar dd {
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 10px;
+}

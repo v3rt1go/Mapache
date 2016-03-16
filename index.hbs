@@ -3,7 +3,7 @@
 <section class="godo-cover {{#if @blog.cover}}cover" style="background-image: url({{@blog.cover}}){{/if}}">
   <article class="godo-cover-wrap">
     {{!-- Blog name --}}
-    <h1 class="godo-cover-title animated bounceInDown">{{@blog.title}}</h1>
+    <h1 class="godo-cover-title animated bounceInDown"><a href="{{@blog.url}}" style="color: white" class="menu-open">{{@blog.title}}</a></h1>
     {{!-- Blog description --}}
     <p class="godo-cover-description animated bounceIn">{{@blog.description}}</p>
   </article>

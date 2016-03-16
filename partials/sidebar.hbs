@@ -1,29 +1,67 @@
 {{!-- Sidebar right --}}
 <div id="sidebar" class="sidebar show-on-medium-screen">
 
-  {{!-- Add your content here --}}
-  <div class="card">
-    <div class="title">Title Example</div>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit.
-    Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue.
+  <div class="card featured-card">
+    <div class="title">Featured Posts</div>
+    {{#get "posts" limit="3" filter="featured:true" order="updated_at desc"}}
+      {{#foreach posts}}
+          <div class="prev-next-row featured-item">
+            <a href="{{url}}" class="prev-next-link featured-link {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" >
+              <h2 class="prev-next-title">{{title}}</h2>
+            </a>
+          </div>
+      {{/foreach}}
+    {{/get}}
   </div>
 
-  {{!-- Another way to add here --}}
+  <div class="items" style="display: none;">
+    <h3>We need your opinion</h3>
+    <div class="card small-card">
+      <strong>Lorem ipsum dolor sit amet</strong><br />
+      consectetur adipiscing elit. aonec a diam lectus. Sed sit amet ipsum mauris.<br />
+      <a href="#">Give feedback</a> <i class="icon-favorite" style="color: red;"></i>
+    </div>
+    <div class="card small-card">
+      <strong>Lorem ipsum dolor sit amet</strong><br />
+      consectetur adipiscing elit. aonec a diam lectus. Sed sit amet ipsum mauris.<br />
+      <a href="#">Give feedback</a> <i class="icon-favorite" style="color: red;"></i>
+    </div>
+    <div class="card small-card">
+      <strong>Lorem ipsum dolor sit amet</strong><br />
+      consectetur adipiscing elit. aonec a diam lectus. Sed sit amet ipsum mauris.<br />
+      <a href="#">Give feedback</a> <i class="icon-favorite" style="color: red;"></i>
+    </div>
+  </div>
+
   <div class="items">
-    <img src="http://41.media.tumblr.com/3966b51da2d941f0c01a907f190ebcb9/tumblr_nqx8hsjuCl1tubinno1_1280.jpg" alt="" />
-  </div>
+      <h3>Clarifications</h3>
+      <dl>
+        <dt>Some rules pages are empty, why?</dt>
+        <dd>The Rules Index is like a Table of Contents for all the things that we plan to write. Many sections have not been written yet, or aren't in a state where they are worth adding. They will be updated soon.</dd>
+        <dt>How often do you update the rules?</dt>
+        <dd>New rules sections are added every 1 - 2 days. The blog is update daily, and many times we update existing rules also.</dd>
+        <dt>What are the differences between <em>Rule</em>, <em>Proposal</em> and <em>Playtest</em> tags?</dt>
+        <dd>Articles tagged with <em>Rule</em> are closest to become an offical rule. They have passed <em>Proposal</em> and <em>Playtest</em> stages and we are happy with them. For more information on how we write the rules on this blog please read <a href="/how-to-read-the-rules">this</a> post.</dd>
+        <dt>Is there a .pdf I can download with the rules?</dt>
+        <dd>No, the rules change very often at this point and it would be to difficult to maintain a PDF file at this rate</dd>
+      </dl>
+    </div>
 
-  {{!-- Another way to add here --}}
-  <div class="card">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit.
-    Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue.
-  </div>
-
-  {{!-- Add your content here - block fixed --}}
   <div class="hidden">
-    <img src="https://s3.amazonaws.com/StartupStockPhotos/uploads/46.jpg" alt="" />
+    <div class="card featured-card">
+      <div class="title">Pinned Posts</div>
+      {{#get "posts" limit="3" filter="page:true" order="updated_at desc"}}
+      {{#foreach posts}}
+          <div class="prev-next-row featured-item">
+            <a href="{{url}}" class="prev-next-link featured-link {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" >
+              <h2 class="prev-next-title">{{title}}</h2>
+            </a>
+          </div>
+        {{/foreach}}
+      {{/get}}
+    </div>
   </div>
+
+
 
 </div>

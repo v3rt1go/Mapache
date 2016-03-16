@@ -3,7 +3,9 @@
 
   <div class="header-topbar-left">
     {{!-- Menu open  --}}
-    <a href="#" id="menu-open" class="menu-open icon-menu"></a>
+    <a href="#" id="menu-open" class="menu-open icon-menu">
+      <span class="icon-menu-text hidden-on-small-screen"> Rules Index</span>
+    </a>
     {{!-- Logo and Page Name --}}
     <a class="header-logo u-align-center" href="{{@blog.url}}">{{#if @blog.logo}}<img src="{{@blog.logo}}" alt="{{@blog.title}}"/>{{else}}<span>{{@blog.title}}</span>{{/if}}</a>
   </div>
@@ -21,15 +23,20 @@
   </div>
 
   <div class="header-topbar-right hidden-on-small-screen">
+    <div class="header-secondary-menu show-on-medium-screen" style="text-align: right;">
+      <a href="/about-the-game-of-deis">About Deis</a>
+      <a href="/why-we-did-this">Motivation</a>
+      <a href="/how-can-you-help">Help Us!</a>
+    </div>
     <div class="header-social u-align-center">
       {{!-- Social navigation --}}
-      <div class="header-social-icon"><span class="icon-facebook"></span><span class="icon-twitter"></span><span class="icon-youtube"></span></div>
+      <div class="header-social-icon"><span class="icon-link"></span></div>
       {{!-- social Panel --}}
       <div class="header-socialPanel">
         <ul>
           <li><a href="#" target="_blank"><span class="social-img c-facebook icon-fb"></span><span class="social-name">Facebook</span></a></li>
           <li><a href="#" target="_blank"><span class="social-img c-twitter icon-twitter"></span><span class="social-name">Twitter</span></a></li>
-          <li><a href="#" target="_blank"><span class="social-img c-github icon-github"></span><span class="social-name">GitHub</span></a></li>
+          <!-- <li><a href="#" target="_blank"><span class="social-img c-github icon-github"></span><span  class="social-name">GitHub</span></a></li>
           <li><a href="#" target="_blank"><span class="social-img c-youtube icon-youtube"></span><span class="social-name">YouTube</span></a></li>
           <li><a href="#" target="_blank"><span class="social-img c-linkedin icon-in"></span><span class="social-name">Linkedin</span></a></li>
           <li><a href="#" target="_blank"><span class="social-img c-codepen icon-codepen"></span><span class="social-name">Codepen</span></a></li>
@@ -38,7 +45,7 @@
           <li><a href="#" target="_blank"><span class="social-img c-dribbble icon-dribbble"></span><span class="social-name">Dribbble</span></a></li>
           <li><a href="#" target="_blank"><span class="social-img c-behance icon-behance"></span><span class="social-name">Behance</span></a></li>
           <li><a href="#" target="_blank"><span class="social-img c-flickr icon-flickr"></span><span class="social-name">Flickr</span></a></li>
-          <li><a href="#" target="_blank"><span class="social-img c-google-plus icon-google-plus"></span><span class="social-name">Google +</span></a></li>
+          <li><a href="#" target="_blank"><span class="social-img c-google-plus icon-google-plus"></span><span class="social-name">Google +</span></a></li> -->
         </ul>
       </div>
     </div>

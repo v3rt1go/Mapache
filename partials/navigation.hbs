@@ -6,6 +6,13 @@
   </div>
   {{!-- List items menu --}}
   <div class="menu-list">
-    {{#foreach navigation}}<a href="{{url absolute="true"}}" class="menu-link {{#if current}}active{{/if}}"><div class="menu-text">{{label}}</div></a>{{/foreach}}
+    {{#foreach navigation}}
+      <a href="{{url absolute="true"}}" class="menu-link {{#if current}}active{{/if}}">
+        <div class="menu-text">
+          <!-- TODO: Add an article count -->
+          {{label}}
+        </div>
+      </a>
+   {{/foreach}}
   </div>
 </nav>

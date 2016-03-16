@@ -13,8 +13,17 @@
 					{{!-- Page content --}}
 					{{content}}
 				</div>
+
 			</article>
+			{{!-- Add Comments --}}
+			<div id="comments"class="comments">
+				<div class="card-content">
+					<div class="fb-comments" data-href="{{url absolute="true"}}" data-width="100%"  data-numposts="10"></div>
+				</div>
+			</div>
 		</div>
+		{{!-- Add Sidebar --}}
+    {{> "sidebar"}}
 	</section>
 </main>
 {{/post}}
